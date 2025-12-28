@@ -1,15 +1,24 @@
 function add(a,b) {
-    if (!Number.isInteger(a+b)) return (a+b).toFixed(7)
+    if (!Number.isInteger(a+b)) {
+        decBtn.disabled=true
+        return (a+b).toFixed(7)
+    }
     else return a+b
 }
 
 function subtract(a,b) {
-    if (!Number.isInteger(a+b)) return (a-b).toFixed(7)
+    if (!Number.isInteger(a-b)) {
+        decBtn.disabled= true
+        return (a-b).toFixed(7)
+    }
     else return a-b
 }
 
 function multiply(a,b) {
-    if (!Number.isInteger(a*b)) return (a*b).toFixed(7)
+    if (!Number.isInteger(a*b)) {
+        decBtn.disabled = true
+        return (a*b).toFixed(7)
+    }
     else return a*b
 }
 
@@ -18,7 +27,10 @@ function divide(a,b) {
         return "Skibidi"
     }
     else {
-        if (!Number.isInteger(a/b)) return (a/b).toFixed(7)
+        if (!Number.isInteger(a/b)) {
+            decBtn.disabled = true 
+            return (a/b).toFixed(7)
+        }
         else return a/b
     }
 }
